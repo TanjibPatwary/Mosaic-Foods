@@ -1,0 +1,31 @@
+<!-- Header html start -->
+    <header>
+        <!-- Announce bar start -->
+        <div class="announce_bar">
+            <h6>WELCOME TO OUR STORE</h6>
+        </div>
+
+        <!-- Main header start -->
+        <div class="main_header">
+            <div class="container">
+                <div class="row">
+                  
+                    <!-- header left start -->
+                    <div class="col-33">
+                    <div class="header_left"></div>
+                    </div>
+
+                    <!-- Header center start -->
+                    <div class="col-33">
+                    <div class="header_center"></div>
+                    </div>
+
+                    <!-- Header right start -->
+                    <div class="col-33">
+                    <div class="header_right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>

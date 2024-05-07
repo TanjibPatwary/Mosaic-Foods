@@ -1,0 +1,830 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;   
+}
+/* a{
+    text-decoration: none; Turn it on if deleted from *
+} */
+input {
+    border: none;
+}
+body{
+    line-height: 1.3;
+    font-weight: 400;
+}
+/* Common css start  */
+.container {
+    max-width: 1500px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    /* gap: 5px; */
+}
+.reverse{
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0;
+    line-height: 1;
+}
+/* flex_base_classes */
+.f-start {
+    align-items: start;
+}
+
+.f-middle {
+    align-items: center;
+}
+
+.f-end {
+    align-items: end;
+}
+
+.f-left {
+    justify-content: left;
+}
+
+.f-center {
+    justify-content: center;
+}
+
+.f-right {
+    justify-content: right;
+}
+
+/* text_base_classes */
+.t-left {
+    text-align: left;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-right {
+    text-align: right;
+}
+
+/* column base class */
+.col-20 {
+    width: 20%; 
+}
+
+.col-25 {
+    width: 25%;
+}
+
+.col-33 {
+    width: 33%;
+}
+.col-40{
+    width: 40%;
+}
+
+.col-50 {
+    width: 50%;
+}
+.col-60{
+    width: 60%;
+}
+.col-100 {
+    width: 100%;
+    max-width: 1500px;
+}
+
+
+/* spacing base classes */
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.ml-15 {
+    margin-left: 15px;
+}
+
+.mr-15 {
+    margin-right: 15px;
+}
+
+
+
+/* Header Start */
+/* header{} */
+header .main_header{
+    background-color: #0a6661;    
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+header .main_header .row{
+    padding-left: 60px;
+    padding-right: 30px;
+}
+/* header left start */
+header .main_header .header_left nav ul{
+    display: flex;
+    color: #e3f5ed;
+    font-size: 14px;
+   
+}
+header .main_header .header_left nav ul li{
+    padding: 0 15px 0 15px;
+}
+header .main_header .header_left nav ul li.navitem ul.dropdown {
+    display: none;
+    position: absolute;
+    padding: 10px 0;
+    width: 145px;
+    border-radius: 5px;
+    top: 25px;
+    background-color: #ffffff;
+    z-index: 999;
+    box-shadow: 0 0 15px #00000050;
+    color: black;
+    font-size: 14px;
+}
+header .main_header .header_left nav ul li.navitem.drop.show ul.dropdown{display: block;}
+
+header .main_header .header_left nav ul li.navitem.drop {
+    position: relative;
+    padding-right: 25px;
+    cursor: pointer;
+}
+
+header .main_header .header_left nav ul li.navitem.drop::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f107";
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
+
+header .main_header .header_left nav ul li.navitem ul.dropdown li.navitem {
+    padding: 8px 20px;
+} 
+/* header center start */
+/* header .main_header .header_center{}
+header .main_header .header_center .logo{}
+header .main_header .header_center a{} */
+header .main_header .header_center a img{
+    width: 178px;
+    height: 31px;
+}
+/* header right start */
+/* header .main_header .header_right{}
+header .main_header .header_right{}
+header .main_header .header_right nav{} */
+header .main_header .header_right nav ul{
+    display: flex;
+    color: #e3f5ed;
+    font-size: 14px;
+}
+header .main_header .header_right nav ul li{
+    padding: 0 15px 0 15px;
+}
+/* header .main_header .header_right nav ul li a{} */
+
+/* Banner Carousel Slideshow CSS Start */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    /* padding-bottom: 200px; */
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* background-position: center; */
+    display: none; /* Initially hide all slides */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    color: #0a6661;
+}
+
+.banner_text1 {
+    background-image: url('../img/home/hero-mosaic-assortment-desktop.jpg');  
+    text-align: left; 
+    padding-left: 60px;
+    
+}
+.banner_text1 h1{
+    font-size: 57px;
+    text-align: left;
+}
+.banner_text1 p{
+    font-size: 19px;
+    padding-top: 10px;
+    /* text-align: left; */
+}
+.banner_text2 {
+    background-image: url('../img/home/hero-sweet-chili-desktop.jpg');
+    text-align: left; 
+    padding-left: 60px;
+}
+.banner_text2 h1{
+    font-size: 57px;
+}
+.banner_text2 p{
+    padding-top: 40px;
+    font-size: 19px;
+}
+.slide-radio {
+    position: absolute;
+    opacity: 0;  
+    bottom: 1000px;
+    top: 10px;
+}
+
+.slide-label {
+    position: relative;
+    display: inline-block;
+    width: 12px; 
+    height: 12px; 
+    background-color: transparent; 
+    border: 2px solid #0a6661; /* Adjust border color */
+    border-radius: 50%;
+    left: 70px;
+    top: 370px;
+    /* margin-right: 0px; */
+    z-index: 1;
+    cursor: pointer;
+  
+}
+
+.slide-radio:checked + .slide-label {
+    background-color: #0a6661; 
+}
+/* main .banner .carousel .slide-radio{
+    left: 100px;
+} */
+main .banner .carousel button{
+    width: 126px;
+    height: 53px;
+    padding: 16px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #0a6661;
+    color: #e3f5ed;
+    margin-top: 40px;
+    border: none;
+}
+
+/* Banner Carousel Slideshow CSS End */
+
+/* Panel Start */
+main .panel{ background-color: #6d596b;}
+main .panel .panel_elements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 15px 0;
+    color: white;
+}
+/* main .panel .panel_elements .dollar_icon{} */
+main .panel .panel_elements .dollar_icon img{
+    width: 30px;
+    height: 35px;
+}
+/* main .panel .panel_elements .guarantee{} */
+main .panel .panel_elements .guarantee p{
+    padding-left: 25px;
+    font-size: 19px;
+}
+/* main .panel .panel_elements .refund{} */
+main .panel .panel_elements .refund p{
+    padding-left: 3px;
+    font-size: 16px;
+}
+
+/* Details Area Start */
+main .details{
+    background-color: #fbf4e9;
+    padding: 0px;
+    margin: 0px;
+}
+main .details .container{
+    padding: 50px 75px 15px;
+    text-align: center;
+}
+main .details h2{
+    font-size: 51px;
+    color: #0a6661;
+}
+main .details p{
+    font-size: 17px;
+    color: #333;
+    padding: 20px 0;
+}
+main .details .row{
+    justify-content: space-between;
+}
+/* Step 1,2,4 */
+/* main .details .step{}
+main .details .step .icon{} */
+main .details .step .icon img{
+    width: 80px;
+    height: 80px;
+    padding-top: 25px;
+}
+/* main .details .step .icon_text {} */
+main .details .step .icon_text h4 {
+    color: #0a6661;
+    font-size: 20px;
+    padding-top: 20px;
+}
+main .details .step .icon_text p {
+    color: #333;
+    font-size: 16px; 
+}
+/* Step 3 */
+/* main .details .step3{}
+main .details .step3 .icon3{} */
+main .details .step3 .icon3 img{
+    width: 96px;
+    height: 76px;
+    padding-top: 25px;
+}
+main .details .step3 .icon_text h4{
+    color: #0a6661;
+    font-size: 20px;
+    padding-top: 20px;
+}
+main .details .step3 .icon_text p {
+    color: #333;
+    font-size: 16px;
+}
+main .details img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: -8px;
+}
+
+/* Menu Area Start */
+main .food_card{
+    padding-top: 75px;  
+    padding-bottom: 90px;
+}
+main .food_card h2{
+    font-size: 51px;
+    color: #0a6661;
+    text-align: center;
+}
+main .food_card .best_seller{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+/* Veggie Bowls */
+main .food_card .best_seller .best_seller_item1{
+    text-decoration: underline;
+}
+main .food_card .row{
+    gap: 35px;
+}
+/* main .food_card a{} */
+/* main .food_card a.card_primary{overflow: hidden;display: block;} */
+main .food_card .card_primary img{
+    max-width: 100%;
+    margin-bottom:-5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+main .food_card .card_primary .white_box{
+    background-color: #fff;
+    color: #0a6661;
+    padding: 30px 0 30px 0; 
+    position: relative; 
+    z-index: 99999;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* border-radius: 5px; */
+    box-shadow: 0 0 15px #00000050;
+}
+main .food_card .card_primary .white_box h3{
+    font-size: 20px;
+}
+
+/* Review Area Start */
+/* Left Side */
+main .review{
+    background-color: #ffdba1;
+}
+main .review .container{padding: 75px 75px 20px;}
+/* main .review .container .row{margin-left: 30px;} */
+main .review .container .row .col-50{
+    /* padding-top: 100px; */
+    padding-left: 60px;
+}
+main .review img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: -7px;
+}
+main .review h2{
+    font-size: 51px;
+    color: #0a6661;
+}
+main .review p{
+    font-size: 17px;
+    color: #333;
+    padding-top: 50px;
+}
+/* Right Side Carousel */
+main .review .container .row .col-50 .review-box{
+    margin-top: -80px;
+}
+main .review .container .row .col-50 .review-box img{
+    width: 400px;
+    height: 400px; 
+}
+
+/* About Us Area Start */
+/* main .about{} */
+/* Left */
+main .about img{
+    width: 788px;
+    height:597px;
+}
+/* main .about {} */
+/* Right */
+main .about .container .col-60{padding: 70px 0px 20px 70px;}
+
+main .about h3{
+    font-size: 27px;
+    color: #0a6661;
+    padding-bottom: 20px;
+}
+main .about p{
+    font-size: 16px;
+    color: #333;
+    padding-bottom: 20px;
+}
+/* main .about p.link{} */
+main .about p.link a{
+    font-size: 13px;
+    color: #bb6965;
+}
+/* main .about p.link a i{} */
+/* Firts One */
+main .about .our_food{
+    padding: 260px 0 0 70px;
+}
+/* Second One */
+main .about .our_vision{
+    text-align: right;
+    padding: 220px 0 0;
+}
+
+/* Get Started Area Start */
+main .get_started{
+    background-color: #ffdba1;
+    text-align: center;
+}
+main .get_started img{
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+}
+main .get_started h2{
+    font-size: 51px;
+    color: #0a6661;
+    padding-top: 85px;
+}
+main .get_started .submission form{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 55px;
+}
+/* Zipcode */
+main .get_started .submission form .zip{
+    margin-top: 44px;
+}
+main .get_started .submission form .zip p{
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+main .get_started .submission form .zip input{
+    padding: 15px 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 315px;
+}
+/* E-mail */
+main .get_started .submission form .mail{
+    margin-left: 20px;
+    margin-top: 44px;
+}
+main .get_started .submission form .mail p{
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+main .get_started .submission form .mail input{
+    padding: 15px 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 315px;
+}
+/* main .get_started .submission form .mail input:focus-visible{} */
+/* main .get_started .submission form .mail input#get_started::placeholder{} */
+main .get_started .submission form .Button button{
+    background-color: #0a6661;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    /* padding: 20px 15px; */
+    margin-top: 60px;
+    margin-left: 20px;
+    width: 220px;
+    height: 50px;
+}
+
+/* Bottom Panel Start */
+main .bottom-panel{
+    padding-left: 240px;
+    padding-right: 240px;
+}
+main .bottom-panel .row{
+    flex-direction: row;
+    padding: 40px 50px;
+    align-items: center;
+}
+main .bottom-panel .panel-header{
+    font-style: italic;
+    color: #0a6661;
+    text-align: right;
+}
+
+/* main .bottom-panel .panel-img1{} */
+main .bottom-panel .panel-img1 img{
+    width: 75px;
+    height: 11px;
+}
+
+/* main .bottom-panel .panel-img2{} */
+main .bottom-panel .panel-img2 img{
+    width: 75px;
+    height: 23px;
+}
+
+/* main .bottom-panel .panel-img3{} */
+main .bottom-panel .panel-img3 img{
+    width: 75px;
+    height: 21px;
+}
+
+/* main .bottom-panel .panel-img4{} */
+main .bottom-panel .panel-img4 img{
+    width: 75px;
+    height: 11px;
+}
+
+/* main .bottom-panel .panel-img5{} */
+main .bottom-panel .panel-img5 img{
+    width: 75px;
+    height: 13px;
+}
+
+
+/* Footer Start */
+/* footer{} */
+footer .footer h4{
+    font-size: 20px;
+    color: #013e3b;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+footer .footer{background-color: #0a6661;}
+footer .footer .row{padding: 75px;}
+footer .footer .footer_logo{
+    width: 135px;
+    height: 30px;
+}
+/* footer .footer .footer_logo img{} */
+
+/* footer ul.meals{} */
+footer ul.meals li{
+    font-size: 16px;
+    color: #e3f5ed;
+}
+/* footer ul.meals li a{} */
+
+/* footer ul.learn{} */
+footer ul.learn h4{
+    margin-top: 35px;
+}
+footer ul.learn li{
+    font-size: 16px;
+    color: #e3f5ed;
+}
+/* footer ul.learn li a{} */
+
+/* footer ul.business{} */
+footer ul.business h4{
+    margin-top: 35px;
+}
+footer ul.business li{
+    font-size: 16px;
+    color: #e3f5ed;
+}
+/* footer ul.business li a{} */
+
+/* footer ul.discover{} */
+/* footer ul.discover h4{
+    font-size: 20px;
+    color: #013e3b;
+    font-weight: bold;
+    margin-bottom: 5px;
+} */
+footer ul.discover li{
+    font-size: 16px;
+    color: #e3f5ed;
+}
+/* footer ul.discover li a{} */
+
+/* footer ul.info{} */
+footer ul.info h4{
+    margin-top: 30px;
+}
+footer ul.info li{
+    font-size: 16px;
+    color: #e3f5ed;
+}
+/* footer ul.info li a{} */
+
+footer ul.media{
+    display: flex;
+}
+footer ul.media li{
+    font-size: 16px;
+    color: #e3f5ed;
+    width: 21px;
+    height: 24px;
+}
+footer ul.media li i{
+    width: 21px;
+    height: 24px;
+}
+/* Footer Bottom Start */
+.footer_bottom{background-color: #004d49;}
+.footer_bottom p{
+    color: #c3f5ed;
+    padding: 20px 50px;
+}
+
+
+/* collections */
+/* veggie-bowls page start */
+/* Banner Area Start */
+main .veg_banner{background-color: #f3e8dd;}
+/* leftside */
+main .veg_banner .leftside{   
+    width: 100%;
+    height: 500px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    text-align: center;
+    max-width: 500px;  
+    padding-left: 120px;
+}
+/* main .veg_banner .leftside .text{
+    padding: 50px 60px;
+} */
+main .veg_banner .leftside .sub_head{
+    margin: 20px;
+    font-size: 16px;
+    color: #855643;
+    /* padding-top: 100px; */
+}
+main .veg_banner .leftside h1{
+    font-size: 56px;
+    color: #855643;
+}
+main .veg_banner .leftside p{
+    margin: 20px;
+    max-width: 365px;
+    font-size: 17px;
+    color: #855643;
+}
+/* rightside */
+main .banner_img{
+    width: 100%;
+    height: 500px;
+    background-image: url('../img/product/veggie-bowls.jpg');
+    background-position: center -50px;
+    background-size: cover;
+}
+/* Convenience Area Start */
+main .convenience{
+    text-align: center;
+    padding-top: 60px;
+}
+main .convenience h2{
+    font-size: 44px;
+    color: #0a6661;
+}
+main .convenience .row{
+    justify-content: center;
+    text-align: center;
+}
+main .convenience .Icon{
+    padding: 63px;
+    max-width: 125px;
+}
+/* main .convenience .Icon .con_icon{} */
+main .convenience .Icon .con_icon img{
+    width: 100px;
+    height: 100px;
+}
+main .convenience .Icon .con_icon_text{
+    font-size: 18px;
+    color: #0a6661;
+    padding: 2px;
+}
+/* Veggie Bowls */
+main .veg_bowls{
+    background-color: #fbf4e9;
+    /* padding-top: 25px;   */
+    padding-bottom: 100px;
+}
+main .veg_bowls img{
+    width: 100%;
+    height: 100%;
+    /* margin-top: -100px; */
+    /* margin-bottom: 175px; */
+}
+main .veg_bowls .row{
+    padding: 25px 140px 25px 70px;
+    /* padding-left: 70px;
+    padding-right: 140px; */
+    gap: 45px;
+}
+/* main .food_card a{} */
+/* main .food_card a.card_primary{overflow: hidden;display: block;} */
+main .veg_bowls .card_primary img{
+    max-width: 100%;
+    max-height: 287px;
+    margin-bottom:-5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+main .veg_bowls .card_primary .white_box{
+    background-color: #fff;
+    color: #0a6661;
+    padding: 30px 0 30px 0; 
+    position: relative; 
+    z-index: 99999;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 15px #00000050;
+}
+main .veg_bowls .card_primary .white_box h3{
+    font-size: 20px;
+}
+main .veg_bowls .card_primary .white_box p{
+    color: #808080;
+    padding-top: 20px;
+}
+/* veggie-bowls page end */
